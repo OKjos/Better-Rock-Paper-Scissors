@@ -30,7 +30,7 @@ function playGame(playerMove) {
     } else if (computerMove === 'scissors') {
       result = 'Tie';
     }
-  }
+  };
 
   if (playerMove === 'rock') {
     if (computerMove === 'rock') {
@@ -40,7 +40,7 @@ function playGame(playerMove) {
     } else if (computerMove === 'scissors') {
       result = 'You win';
     }
-  }
+  };
 
   if (playerMove === 'scissors') {
     if (computerMove === 'rock') {
@@ -50,7 +50,7 @@ function playGame(playerMove) {
     } else if (computerMove === 'scissors') {
       result = 'Tie';
     }
-  }
+  };
 
   if (result === 'You win') {
     score.wins += 1;
@@ -58,7 +58,7 @@ function playGame(playerMove) {
     score.losses += 1;
   } else if (result === 'Tie') {
     score.ties += 1;
-  }
+  };
 
 
   localStorage.setItem('score', JSON.stringify(score));
@@ -71,11 +71,11 @@ function playGame(playerMove) {
   document.querySelector('.js-moves').innerHTML = `You 
   <img src="./Images/${playerMove}-emoji.png" class="png-images">
   <img src="./Images/${computerMove}-emoji.png" class="png-images"> Computer`;
-}
+};
 
 function updateScoreElement() {
   document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
-}
+};
 
 
 function pickComputerMoves() {
@@ -89,10 +89,5 @@ function pickComputerMoves() {
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
     computerMove = 'scissors';
   }
-
   return computerMove;
-  
-}
-
-
-//sdfsdfsd
+};
