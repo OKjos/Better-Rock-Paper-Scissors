@@ -91,3 +91,11 @@ function pickComputerMoves() {
   }
   return computerMove;
 };
+
+document.querySelector('.reset-button-js').addEventListener('click', () => {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.setItem('score', JSON.stringify(score));
+  updateScoreElement();
+});

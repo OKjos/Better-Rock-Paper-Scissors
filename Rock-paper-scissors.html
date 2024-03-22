@@ -7,31 +7,35 @@
   <title>Document</title>
 </head>
 <body>
-  
-  <button class="rock-button-js png-images">
-    <img src="./Images/rock-emoji.png">
-  </button>
+  <div class="main-container">
+    <div class="move-container"> 
+      <button class="rock-button-js png-images">
+        <img class="images" src="./Images/rock-emoji.png">
+      </button>
 
-  <button class="paper-button-js png-images">
-    <img src="./Images/paper-emoji.png">
-  </button>
+      <button class="paper-button-js png-images">
+        <img class="images" src="./Images/paper-emoji.png">
+      </button>
 
-  <button class="scissors-button-js png-images">
-    <img src="./Images/scissors-emoji.png">
-  </button>
-
-  <p class="js-result result"></p>
-  <p class="js-moves"></p>
-  <p class="js-score score"></p>
-
-  <button onclick="
-    score.wins = 0; 
-    score.losses = 0; 
-    score.ties = 0; 
-    localStorage.removeItem('score');
-    updateScoreElement();"
-  >Reset</button>
-
+      <button class="scissors-button-js png-images">
+        <img class="images" src="./Images/scissors-emoji.png">
+      </button>
+    </div>
+    <div class="results-container">
+      <p class="js-result result"></p>
+      <p class="js-moves moves"></p>
+      <p class="js-score score"></p>
+    </div>
+    <div class="reset-container">
+      <button class="reset-button reset" onclick="
+        score.wins = 0; 
+        score.losses = 0; 
+        score.ties = 0; 
+        localStorage.removeItem('score');
+        updateScoreElement();"
+      >Reset</button>
+    </div>
+  </div>
   <script src="Rock-paper-scissors.js"></script>
 </body>
 </html>
